@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}News App{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2 class="heading_freshnews">Fresh News</h2>
+    <form class="loadnewsbtn" action="/" method="POST">
+        <button type="submit">Scrape News</button>
+    </form>
+    <div class="cardContainer">
+        {% for task in tasks %}
+            <div class="cardArticle">
+                <h3>{{task.newsTitle}}</h3>
+                <img src="{{task.newsImage}}"/>
+                <span class="url">URL: <a href="{{task.newsUrl}}">{{task.newsUrl}}</a></span>
+                <!-- <button><a>Delete</a></button> -->
+                <button><a href="/delete/{{task.id}}">Delete</a></button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %} 
