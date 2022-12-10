@@ -2,13 +2,7 @@
 
 {% block body %}
 
-<form action="/" method="POST">
-    <span>&#128270;</span>
-    <input type="text" name="content" id="content"/>
-    <button type="submit">Scrape News</button>
-</form>
-
-<div class="container">
+<!-- <div class="container">
     <table>
         <thead>
             <th>ID</th>
@@ -25,6 +19,14 @@
         </tr>
         {% endfor %}
     </table>
+</div> -->
+
+<div >
+    <form class="search_form" action="/search" method="POST">
+        <span>&#128270;</span>
+        <input type="text" name="content" id="content"/>
+        <button type="submit">Search News</button>
+    </form>
 </div>
     
 

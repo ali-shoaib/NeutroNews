@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: sans-serif;
 	background-image: linear-gradient(to bottom, #2c3e50, #4ca1af);
+    background-size: 100% 300%;
 }
 nav{
     background: #91bbdd;
@@ -22,24 +23,28 @@ nav ul{
     list-style: none;
     height: 34px;
     margin: 0;
-    background: rgb(39, 39, 143);
+    background: #fff;
+    border-top: 3px solid steelblue;
+    border-bottom: 3px solid steelblue;
 }
 nav ul li{
     margin: 0 0 0 10px;
 }
 nav ul li a{
-    color: #fff;
+    color: steelblue;
+    font-weight: 600;
 }
 nav h1{
-    color: #fff;
-    font-size: 30px;
+    color: #2c3e50;
+    font-size: 35px;
     margin: 0;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black;
+    /* -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black; */
+    font-family: ui-monospace;
 }
 .cardArticle button{
     position: absolute;
@@ -55,16 +60,17 @@ nav h1{
     color: red;
     font-size: 20px;
 }
-/* 'form{
+form.search_form{
     position: relative;
-    margin: 0 0 40px 0;
+    /* margin: 0 0 40px 0; */
+    text-align: center;
 }
-form span{
+form.search_form span{
     position: absolute;
-    left: 340px;
+    left: 265px;
     top: 12px;
 }
-form input{
+form.search_form input{
     width: 540px;
     height: 42px;
     max-width: 97%;
@@ -72,9 +78,9 @@ form input{
     margin: 0 auto;
     font-size: 17px;
 }
-form button{
-    height: 46px;
-} */
+form.search_form button{
+    height: 45px;
+}
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -85,22 +91,15 @@ form button{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.heading_freshnews{
-    display: inline;
-    padding: 5px 10px 5px 10px;
-    color: #ffff;
-    font-size: 40px;
-    animation: hf 2s ease-in-out infinite;
-}
 @keyframes hf{
     0% {
-        border: 1px solid transparent;
+        box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
     }
     50% {
-        border: 1px solid red;
+        box-shadow: 0px 0px 0px 2px rgba(255, 0, 0, 1);
     }
     100% {
-        border: 1px solid transparent;
+        box-shadow: 0px 0px 0px 2px rgba(0,0,0,0);
     }
 }
 .cardArticle{
@@ -138,4 +137,16 @@ table tr:nth-child(even){
 }
 .loadnewsbtn{
     text-align: center;
+}
+.heading_freshnews{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading_freshnews h2{
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    color: #ffff;
+    font-size: 40px;
+    animation: hf 2s ease-in-out infinite;
 }
